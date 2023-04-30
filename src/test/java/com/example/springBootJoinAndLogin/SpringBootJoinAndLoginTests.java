@@ -1,10 +1,10 @@
-package com.example.springboottutorialfullcourse;
+package com.example.springBootJoinAndLogin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringboottutorialfullcourseApplicationTests {
+class SpringBootJoinAndLoginTests {
 
     @Test
     void contextLoads() {
