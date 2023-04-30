@@ -1,6 +1,6 @@
 package com.example.springboottutorialfullcourse.student.service;
 
-import com.example.springboottutorialfullcourse.store.StudentRepository;
+import com.example.springboottutorialfullcourse.student.store.StudentRepository;
 import com.example.springboottutorialfullcourse.student.entity.Student;
 import org.springframework.stereotype.Service;
 

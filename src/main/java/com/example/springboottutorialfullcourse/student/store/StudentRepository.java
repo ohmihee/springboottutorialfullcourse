@@ -1,4 +1,4 @@
-package com.example.springboottutorialfullcourse.store;
+package com.example.springboottutorialfullcourse.student.store;
 
 import com.example.springboottutorialfullcourse.student.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;

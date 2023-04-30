@@ -1,6 +1,6 @@
-package com.example.springboottutorialfullcourse.config;
+package com.example.springboottutorialfullcourse.student.config;
 
-import com.example.springboottutorialfullcourse.store.StudentRepository;
+import com.example.springboottutorialfullcourse.student.store.StudentRepository;
 import com.example.springboottutorialfullcourse.student.entity.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
