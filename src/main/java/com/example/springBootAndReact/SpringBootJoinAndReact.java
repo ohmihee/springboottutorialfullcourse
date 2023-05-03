@@ -1,14 +1,14 @@
-package com.example.springBootJoinAndLogin;
+package com.example.springBootAndReact;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //@SpringBootApplication(scanBasePackages = {"com.example.springBootJoinAndLogin"})
 @SpringBootApplication
-public class SpringBootJoinAndLogin {
+public class SpringBootJoinAndReact {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootJoinAndLogin.class, args);
+        SpringApplication.run(SpringBootJoinAndReact.class, args);
     }
 
 }
