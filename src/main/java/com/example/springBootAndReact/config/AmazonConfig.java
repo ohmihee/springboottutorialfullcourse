@@ -1,12 +1,22 @@
 package com.example.springBootAndReact.config;
 
-import com.amazonaws.services.s3.AmazonS3;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+
+import javax.annotation.PostConstruct;
 
 @Configuration
 public class AmazonConfig {
 
-    public AmazonS3 s3() {
+    private String accessKey;
+    private String secretKey;
 
+    @PostConstruct
+    public void init (@Value("${aws.accessKey}") String accessKey, @Value("${aws.secretKey}") String secretKey) {
+        this.accessKey = accessKey;
+        this.secretKey = secretKey;
     }
+
+
 }

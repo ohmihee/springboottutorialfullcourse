@@ -31,3 +31,6 @@ spring:
 server:
   error:
     include-binding-errors:
+aws:
+  accessKey:
+  secretKey:
