@@ -30,6 +30,11 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  email:
+    naver:
+      secretKey:
+      accessKey:
+      serviceId:
 
 server:
   error:
