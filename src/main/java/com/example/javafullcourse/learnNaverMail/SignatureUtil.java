@@ -1,26 +1,25 @@
 package com.example.javafullcourse.learnNaverMail;
 
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.stereotype.Component;
-
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
 
 @Component
-public class EmailUtil {
-    public String makeSignature (String timestamp, String accessKey, String secretKey, String _url) {
+public class SignatureUtil {
+    public String makeSignature(String timestamp, String accessKey, String secretKey, String url) {
         String space = " ";
         String newLine = "\n";
-        String method = " POST";
-        String url = _url;
+        String method = "POST";
 
         String message = new StringBuilder()
                 .append(method)
                 .append(space)
                 .append(url)
+                .append(newLine)
                 .append(timestamp)
                 .append(newLine)
                 .append(accessKey)
@@ -32,11 +31,10 @@ public class EmailUtil {
             Mac mac = Mac.getInstance("HmacSHA256");
             mac.init(signingKey);
             byte[] rawHmac = mac.doFinal(message.getBytes("UTF-8"));
-            String encodeBase64String = Base64.getEncoder().encodeToString(rawHmac);
+            String encodeBase64String = Base64.encodeBase64String(rawHmac);
             return encodeBase64String;
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException | InvalidKeyException e) {
             throw new RuntimeException(e);
         }
     }
-
 }
